@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom';
 const API = import.meta.env.VITE_API_URL;
 
-export default function MovieDetail() {
+export default function MovieDetails() {
     const [movie, setMovie] = useState([]);
         const { id } = useParams();
         const navigate = useNavigate();
@@ -68,7 +67,8 @@ const deleteMovie = () => {
           <td>{movie.genre}</td>
         </tr>
         <tr>
-Schedule          <td>{movie.schedule}</td>
+          <th>Schedule</th>
+          <td>{movie.schedule}</td>
         </tr>
         <tr>
           <th>Release Year</th>
