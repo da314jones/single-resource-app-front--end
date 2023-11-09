@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+import Movie from './Movie';
+import "./MovieList.css"
 const API = import.meta.env.VITE_API_URL;
 
 export default function MovieList() {
@@ -29,7 +31,7 @@ export default function MovieList() {
           </thead>
           <tbody>
             {movies.map((movie) => {
-              return <movie key={movie.id} movie={movie} />;
+              return <Movie key={movie.id} movie={movie} />;
             })}
           </tbody>
         </table>
