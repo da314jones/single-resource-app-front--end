@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
+import { Card } from "react-bootstrap";
 import Movie from "./Movie";
 import "./MovieList.css";
 
@@ -9,7 +10,7 @@ const API = import.meta.env.VITE_API_URL;
 export default function MovieList() {
   const [allMovies, setAllMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [moviesPerPage, setMoviesPerPage] = useState(5);
+  const [moviesPerPage, setMoviesPerPage] = useState(7);
 
   useEffect(() => {
     fetch(`${API}/movies`)
@@ -30,7 +31,9 @@ export default function MovieList() {
 
   return (
     <div className="movies-container">
-      <img className="movies-container-image" src="public/lens-front.jpg" alt="" />
+     
+      <img className="movies-container-image" src="public/lens-front.png" alt="" />
+      
       <section>
         <Table striped bordered hover>
           <thead>
@@ -63,7 +66,7 @@ export default function MovieList() {
             })}
           </tbody>
         </Table>
-        <div className="pagination">
+        <div className="movie-container-pagination">
           <Button
             onClick={() => paginate(currentPage - 1)}
             disabled={currentPage === 1}

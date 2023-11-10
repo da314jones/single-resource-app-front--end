@@ -1,14 +1,18 @@
 .movies-container {
   display: flex;
+  justify-content: center;
     padding: 20px;
   }
 
   .movies-container-image {
-     max-height: 200px;
-     width: 500px;
+    padding: 50px 40px 5px 10px;
+     max-height: 500px;
+     min-width: 50px;
+     
    }
   
   table {
+    margin: 0 30px;
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
@@ -28,5 +32,12 @@
     background-color: #4CAF50;
   }
   
+  .movie-container-pagination {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
   
-  
+  .movie-container-pagination Button, span {
+    margin: 20px;
+  }
