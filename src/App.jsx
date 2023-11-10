@@ -7,7 +7,7 @@ import Home from "./Pages/Home";
 import Index from "./Pages/Index";
 import New from "./Pages/New";
 import Show from "./Pages/Show";
-// import NavBar
+import NavBar from "./component/NavBar"
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 function App() {
@@ -16,7 +16,9 @@ function App() {
     <>
     <div className='app'>
       <Router>
-        {/* <NavBar /> */}
+        <div className="nav">
+          <NavBar />
+        </div>
         <main>
         <Routes>
           <Route path="/" element={<Home />} />
