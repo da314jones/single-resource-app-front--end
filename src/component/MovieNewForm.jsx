@@ -52,8 +52,13 @@ export default function MovieNewForm() {
     addMovie();
   };
 
+  const handleCancel = () => {
+    
+  }
+
   return (
-    <Form noValidate onSubmit={handleSubmit}>
+    <div className="form-container">
+          <Form noValidate onSubmit={handleSubmit}>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formGridMovieName">
           <Form.Label>Movie Name</Form.Label>
@@ -61,7 +66,7 @@ export default function MovieNewForm() {
             required
             name="movie_name"
             type="text"
-            placeholder="Enter movie name"
+            placeholder="Enter code name"
             onChange={handleInputChange}
           />
         </Form.Group>
@@ -105,7 +110,7 @@ export default function MovieNewForm() {
           <Form.Control
             name="staring"
             type="text"
-            placeholder="Enter main cast"
+            placeholder="Enter main star name"
             onChange={handleInputChange}
           />
         </Form.Group>
@@ -115,7 +120,7 @@ export default function MovieNewForm() {
           <Form.Control
             name="genre"
             type="text"
-            placeholder="Enter movie genre"
+            placeholder="Enter genre"
             onChange={handleInputChange}
           />
         </Form.Group>
@@ -164,23 +169,32 @@ export default function MovieNewForm() {
           />
         </Form.Group>
       </Row>
-
-      <Form.Group className="mb-3" controlId="formGridSchedule">
-        <Form.Label>Schedule</Form.Label>
+      <Row className="mb-3">
+      <Form.Group as={Col} controlId="formGridSchedule">
+        <Form.Label>Start date:</Form.Label>
         <Form.Control
           name="schedule"
-          type="text"
-          placeholder="Enter movie schedule"
+          type="date"
+          placeholder="Start date"
           onChange={handleInputChange}
         />
       </Form.Group>
-
+      <Form.Group as={Col} controlId="formGridSchedule">
+        <Form.Label>End date:</Form.Label>
+        <Form.Control
+          name="schedule"
+          type="date"
+          placeholder="End date"
+          onChange={handleInputChange}
+        />
+      </Form.Group>
+      </Row>
       <Form.Group className="mb-3" controlId="formGridOverview">
         <Form.Label>Overview</Form.Label>
         <Form.Control
           as="textarea"
           name="overview"
-          placeholder="Enter movie overview"
+          placeholder="Enter overview description"
           onChange={handleInputChange}
         />
       </Form.Group>
@@ -198,6 +212,9 @@ export default function MovieNewForm() {
       <Button variant="primary" type="submit">
         Create Movie
       </Button>
+      <Button variant="primary" type="">
+Cancel      </Button>
     </Form>
+           </div>
   );
 }
