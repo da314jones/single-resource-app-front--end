@@ -8,7 +8,7 @@ import Index from "./Pages/Index";
 import New from "./Pages/New";
 import Show from "./Pages/Show";
 // import NavBar
-
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 function App() {
 

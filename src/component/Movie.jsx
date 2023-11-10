@@ -1,19 +1,18 @@
+// Movie.js
 import { Link } from "react-router-dom";
-
 import React from "react";
 
 export default function Movie({ movie }) {
+ 
   return (
     <tr>
       <td>
-        <Link to={`/movies/${movie.id}`}>
-          <td>{movie.movie_name}</td>
-        </Link>
+        <Link to={`/movies/${movie.id}`}>{movie.movie_name}</Link>
       </td>
       <td>{movie.director}</td>
       <td>{movie.currentBalance}</td>
       <td>{movie.schedule}</td>
-      <td>{movie.link}</td>
+
       <td>
         <a href={movie.poster_link} target="_blank" rel="noopener noreferrer">
           <img
