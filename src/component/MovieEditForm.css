@@ -1,0 +1,19 @@
+.form-edit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+form.label {
+    background-color: grey;
+}
+
+Button {
+    height: 35px;
+    width: 130px;
+}
+.form-edit-container-button {
+    display: flex;
+    justify-content: space-around;
+}

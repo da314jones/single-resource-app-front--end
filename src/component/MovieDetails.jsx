@@ -1,38 +1,39 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "./MovieDetails.css"
 const API = import.meta.env.VITE_API_URL;
 
-export default function MovieDetails() {
-    const [movie, setMovie] = useState([]);
-        const { id } = useParams();
+export default function MovieDetails({ movie}) {
         const navigate = useNavigate();
 
-useEffect(() => {
-    fetch(`${API}/movies/${id}`)
-    .then ((response) => response.json())
-    .then((responseJSON) => {
-        setMovie(responseJSON)
-    })
-    .catch(error => console.log(error))
-}, {id, API})
+        const handleDelete = () => {
+          const httpOptions = { method: 'DELETE' };
+          fetch(`${API}/movies/${movie.id}`, httpOptions)
+            .then(() => navigate('/movies'))
+            .catch((error) => console.log(error));
+        };
 
-const handleDelete = () => {
-    deleteMovie()
-}
+// useEffect(() => {
+//     fetch(`${API}/movies/${id}`)
+//     .then ((response) => response.json())
+//     .then((responseJSON) => {
+//         setMovie(responseJSON)
+//     })
+//     .catch(error => console.log(error))
+// }, {id, API})
 
-const deleteMovie = () => {
-    const httpOptions = { method: "DELETE" }
-    fetch(`${API}/movies/${id}`, httpOptions)
-    .then(() => navigate(`/movies`))
-    .catch(error => console.log(error))
-}
+
+// const deleteMovie = () => {
+//     const httpOptions = { method: "DELETE" }
+//     fetch(`${API}/movies/${id}`, httpOptions)
+//     .then(() => navigate(`/movies`))
+//     .catch(error => console.log(error))
+// }
 
   return (
     <div className="movie-detail-container">
       <div className="sidebar">
         <button onClick={handleDelete}>Delete</button>
-        <Link to={`/edit/${movie.id}`}>Edit</Link>
+        <Link to={`/movies/${movie.id}/edit`}>Edit</Link>
         <button onClick={() => navigate(-1)}>Back</button>
         <Link to={`/tasks/${movie.id}`}>New Task</Link>
       </div>
