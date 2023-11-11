@@ -1,9 +1,21 @@
+
+
+  
+
+
+
+
+
+
+
+
+
 app
 #root {
     background-color: #f2efeb;
   }
   
   .nav {
-    padding-top: 40px;
+    padding-top: 20px;
     justify-content: center;
   }
