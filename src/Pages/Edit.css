@@ -1,3 +1,24 @@
-.new-edit {
-    display: flex;
-justify-content: center;}
+
+
+.new-edit-container {
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .new-edit-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/edit.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3; 
+    z-index: -1;
+  }
+  

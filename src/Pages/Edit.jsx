@@ -1,14 +1,11 @@
 import MovieEditForm from "../component/MovieEditForm";
 import "./Edit.css"
-
-
 function Edit() {
 
   return (
-    <div className="new-edit">
+    <div className="new-edit-container">
       <h2>Edit</h2>
       <MovieEditForm />
-      <img src="/edit.png" />
     </div>
   );
 }
