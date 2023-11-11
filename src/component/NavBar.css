@@ -3,16 +3,14 @@
     overflow: hidden;
     background-color: #333;
     position: fixed; 
-    top: 0; 
-    width: 100%; 
-    left: 0;
+    width: 100%;
+    
     font-size: 10px;
     background: linear-gradient(90deg, #2a0eaa 25%, #080514 100%);
     /* background: linear-gradient(90deg, #080514 25%, #2a0eaa 100%); */
   }
 
   .navbar a {
-    float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;

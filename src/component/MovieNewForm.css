@@ -1,3 +1,30 @@
-.form-container {
-    /* display: flex; */
+
+newform
+  .form-container {
+}
+
+.form-container-button {
+    display: flex;
+    
+}form {
+    padding: 20px;
+    width: 600px;
+}
+
+.new {
+    background: linear-gradient(90deg, #2a0eaa 25%, #080514 100%);
+    margin-right: 20px;
+    width: 106px;
+    margin-left: 20px;
+}
+
+.clear {
+    margin-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.cancel {
+padding-left: 25px;
+padding-right: 25px;
 }
