@@ -37,7 +37,7 @@ export default function NavBar() {
                 <li className="nav-item">
                   <a className="navbar-brand" href="/">
                     <div >
-                      <img className="contain" src="/public/logo.png" alt="logo" width="55" height="55"/>
+                      <img className="contain" src="/public/logo.png" alt="logo" width="35" height="35"/>
                     </div>
                   </a>
                 </li>
