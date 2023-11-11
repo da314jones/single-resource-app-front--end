@@ -5,7 +5,7 @@ const API = import.meta.env.VITE_API_URL;
 export default function NavBar() {
   return (
     <div className="navbar" >
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark  ">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
         
           <h1 >
             <Link to="/">
@@ -31,12 +31,19 @@ export default function NavBar() {
               </svg>
             </Link>
           </h1>
-        <div className="container">
-          " "
-          <a className="navbar-brand" href="#">
-            <img src="/public/logo.jpeg" alt="Bootstrap" width="65" height="65"/>
-          </a>
+
+        <div className="navbar-collapse collapse">
+            <ul className="navbar-nav ms-auto">
+                <li className="nav-item">
+                  <a className="navbar-brand" href="/">
+                    <div >
+                      <img className="contain" src="/public/logo.png" alt="logo" width="55" height="55"/>
+                    </div>
+                  </a>
+                </li>
+            </ul>
         </div>
+
       </nav>
     </div>
   )

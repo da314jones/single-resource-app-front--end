@@ -3,11 +3,12 @@
     overflow: hidden;
     background-color: #333;
     position: fixed; 
+    height: 90px;
     top: 0; 
     width: 100%; 
     left: 0;
     font-size: 10px;
-    background: linear-gradient(90deg, #2a0eaa 25%, #080514 100%);
+    background: linear-gradient(90deg, #2a0eaa 25%, #080514 65%);
     /* background: linear-gradient(90deg, #080514 25%, #2a0eaa 100%); */
   }
 
@@ -21,12 +22,22 @@
   }
   
   .navbar a:hover {
-    background: #ddd;
+    background: grey;
     color: black;
   }
   
 .container{
   color: #333;
+}
+
+.contain{
+  border-radius: 70px;
+  margin-right: 10px;
+  margin-bottom:10px;
+}
+
+h1{
+  margin: 45px;
 }
 
 
