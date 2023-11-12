@@ -68,7 +68,7 @@ export default function MovieList() {
           </tbody>
         </Table>
         <div className="movie-container-pagination">
-          <Button
+          <Button className="atlBtnColor"
             onClick={() => paginate(currentPage - 1)}
             disabled={currentPage === 1}
             variant="primary"
@@ -76,7 +76,7 @@ export default function MovieList() {
             Previous
           </Button>
           <span>Page {currentPage}</span>
-          <Button
+          <Button className="atlBtnColor"
             onClick={() => paginate(currentPage + 1)}
             disabled={indexOfLastMovie >= allMovies.length}
             variant="primary"
