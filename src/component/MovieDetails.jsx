@@ -15,14 +15,29 @@ export default function MovieDetails({ movie }) {
   return (
     <div className="movie-detail-container">
       <div className="sidebar">
-        <button onClick={handleDelete}>Delete</button>
-        <Link to={`/movies/${movie.id}/edit`}>Edit</Link>
-        <button onClick={() => navigate(-1)}>Back</button>
-        <Link to={`/tasks/${movie.id}`}>New Task</Link>
+        <div className="btnGrid">
+          <div>
+            <button className="btn btn-primary atlBtnColor" onClick={handleDelete}>Delete</button>
+          </div>
+          <div>
+            <button className="btn btn-primary atlBtnColor" onClick={() => navigate(-1)}>Back</button>
+          </div>
+        </div>
+        <div className="imageV2" >
+          <img 
+            src={movie.poster_link}
+            alt={`Poster of ${movie.movie_name}`}
+            style={{ height: "375px" }}
+          />
+        </div>
+        <br></br>
+        <br></br>
+        <Link className="atlBtnColor" to={`/movies/${movie.id}/edit`}>Edit</Link>
+        <Link className="atlBtnColor" to={`/tasks/${movie.id}`}>New Task</Link>
       </div>
-      <div className="movie-details">
-        <table>
-          <tbody>
+      <div className="movie-details table table-striped table-hover">
+        <table >
+          <tbody >
             <tr>
               <th>Studio</th>
               <td>{movie.studio}</td>
@@ -33,7 +48,7 @@ export default function MovieDetails({ movie }) {
             </tr>
             <tr>
               <th>Balance</th>
-              <td>{movie.balance}</td>
+              <td>{movie.current_balance?movie.current_balance:0}</td>
             </tr>
             <tr>
               <th>Budget</th>
@@ -57,7 +72,15 @@ export default function MovieDetails({ movie }) {
             </tr>
             <tr>
               <th>Release Year</th>
-              <td>{movie.releaseYear}</td>
+              <td>{movie.release_year}</td>
+            </tr>
+            <tr>
+              <th>In Production</th>
+              <td>{movie.in_production?"Yes":"No"}</td>
+            </tr>
+            <tr>
+              <th>Runtime</th>
+              <td>{movie.runtime}</td>
             </tr>
             <tr>
               <th>Tasks</th>

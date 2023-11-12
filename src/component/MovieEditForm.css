@@ -9,10 +9,7 @@ form.label {
     background-color: grey;
 }
 
-Button {
-    height: 35px;
-    width: 130px;
-}
+
 .form-edit-container-button {
     display: flex;
     justify-content: space-around;

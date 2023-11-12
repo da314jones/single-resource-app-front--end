@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 const API = import.meta.env.VITE_API_URL;
 import MovieDetails from "../component/MovieDetails";
+import "./Show.css";
 
 export default function Show() {
   let { id } = useParams();
