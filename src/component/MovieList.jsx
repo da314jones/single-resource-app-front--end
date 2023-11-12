@@ -32,7 +32,8 @@ export default function MovieList() {
   return (
     <div className="movies-container">
      
-      <img className="movies-container-image" src="public/lens-front.png" alt="" />
+      <img className="movies-container-image" src="camera.jpeg" alt="" />
+      
       
       <section>
         <Table striped bordered hover>
@@ -40,7 +41,7 @@ export default function MovieList() {
             <tr>
               <th>Name</th>
               <th>Director</th>
-              <th>Balance</th>
+              <th>Balance(M$)</th>
               <th>Schedule</th>
               <th>Image</th>
             </tr>
@@ -67,7 +68,7 @@ export default function MovieList() {
           </tbody>
         </Table>
         <div className="movie-container-pagination">
-          <Button
+          <Button className="atlBtnColor"
             onClick={() => paginate(currentPage - 1)}
             disabled={currentPage === 1}
             variant="primary"
@@ -75,7 +76,7 @@ export default function MovieList() {
             Previous
           </Button>
           <span>Page {currentPage}</span>
-          <Button
+          <Button className="atlBtnColor"
             onClick={() => paginate(currentPage + 1)}
             disabled={indexOfLastMovie >= allMovies.length}
             variant="primary"

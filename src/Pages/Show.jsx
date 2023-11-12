@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 const API = import.meta.env.VITE_API_URL;
 import MovieDetails from "../component/MovieDetails";
+import "./Show.css";
 
 export default function Show() {
   let { id } = useParams();
@@ -23,7 +24,9 @@ export default function Show() {
   
   return (
     <div className="Show">
-      <h2>{movie.movie_name}</h2>
+      <div className="showtitle">
+        {movie.movie_name}
+      </div>
       <MovieDetails movie={movie} />
     </div>
   );

@@ -1,6 +1,7 @@
 // Movie.js
 import { Link } from "react-router-dom";
 import React from "react";
+import "./Movie.css"
 
 export default function Movie({ movie }) {
  

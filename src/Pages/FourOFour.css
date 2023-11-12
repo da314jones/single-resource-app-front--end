@@ -1,0 +1,23 @@
+.fourOFourBack{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/fourOfour.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3; 
+    z-index: -1;
+}
+
+.message{
+    color:black;
+    opacity:unset;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 100px;
+    font-weight: 800;
+}

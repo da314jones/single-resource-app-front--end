@@ -1,26 +1,14 @@
 
 
 .new-edit-container {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-  }
-  
-  .new-edit-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/edit.png');
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+    url('/editV2.jpeg');
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.3; 
-    z-index: -1;
+    background-attachment: fixed;
   }
   
-  h2 {
-    padding-right: 45px;
+  .editTitle {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
   }
