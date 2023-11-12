@@ -1,7 +1,4 @@
 
-
-
-
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -10,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "./MovieNewForm.css"
-const API = import.meta.env.VITE_BASE_URL;
+const API = import.meta.env.VITE_API_URL;
 
 export default function MovieNewForm() {
   const [movie, setMovie] = useState({
@@ -26,7 +23,7 @@ export default function MovieNewForm() {
     current_balance: 0,
     schedule: "",
     genre: "",
-    in_production: false,
+    in_production: false
   });
   const navigate = useNavigate();
 
@@ -45,10 +42,10 @@ export default function MovieNewForm() {
   };
 
   const handleInputChange = (e) => {
-    const { id, value, type, checked } = e.target;
+    const { name, value, type, checked } = e.target;
     setMovie({
       ...movie,
-      [id]: type === "checkbox" ? checked : value,
+      [name]: type === "checkbox" ? checked : value,
     });
   };
 
@@ -75,7 +72,7 @@ export default function MovieNewForm() {
       current_balance: 0,
       schedule: "",
       genre: "",
-      in_production: false,
+      in_production: false
     });
   };
 
@@ -90,6 +87,7 @@ export default function MovieNewForm() {
               name="movie_name"
               type="text"
               placeholder="Enter code name"
+              value={movie.movie_name}
               onChange={handleInputChange}
             />
           </Form.Group>
@@ -100,6 +98,7 @@ export default function MovieNewForm() {
               name="poster_link"
               type="text"
               placeholder="Enter poster URL"
+              value={movie.poster_link}
               onChange={handleInputChange}
             />
           </Form.Group>
@@ -112,6 +111,7 @@ export default function MovieNewForm() {
               name="studio"
               type="text"
               placeholder="Enter production studio"
+              value={movie.studio}
               onChange={handleInputChange}
             />
           </Form.Group>
@@ -122,6 +122,7 @@ export default function MovieNewForm() {
               name="director"
               type="text"
               placeholder="Enter director name"
+              value={movie.director}
               onChange={handleInputChange}
             />
           </Form.Group>
@@ -134,6 +135,7 @@ export default function MovieNewForm() {
               name="staring"
               type="text"
               placeholder="Enter main star name"
+              value={movie.staring}
               onChange={handleInputChange}
             />
           </Form.Group>
@@ -144,6 +146,7 @@ export default function MovieNewForm() {
               name="genre"
               type="text"
               placeholder="Enter genre"
+              value={movie.genre}
               onChange={handleInputChange}
             />
           </Form.Group>
@@ -156,6 +159,7 @@ export default function MovieNewForm() {
               name="runtime"
               type="number"
               placeholder="Enter runtime in minutes"
+              value={movie.runtime}
               onChange={handleInputChange}
             />
           </Form.Group>
@@ -166,6 +170,7 @@ export default function MovieNewForm() {
               name="release_year"
               type="number"
               placeholder="Enter release year"
+              value={movie.release_year}
               onChange={handleInputChange}
             />
           </Form.Group>
@@ -178,6 +183,7 @@ export default function MovieNewForm() {
               name="budget"
               type="number"
               placeholder="Enter budget"
+              value={movie.budget}
               onChange={handleInputChange}
             />
           </Form.Group>
@@ -188,6 +194,7 @@ export default function MovieNewForm() {
               name="current_balance"
               type="number"
               placeholder="Enter current balance"
+              value={movie.current_balance}
               onChange={handleInputChange}
             />
           </Form.Group>
@@ -199,18 +206,20 @@ export default function MovieNewForm() {
               name="schedule"
               type="date"
               placeholder="Start date"
+              value={movie.schedule}
               onChange={handleInputChange}
             />
           </Form.Group>
-          <Form.Group as={Col} controlId="formGridSchedule">
+          {/* <Form.Group as={Col} controlId="formGridSchedule">
             <Form.Label>End date:</Form.Label>
             <Form.Control
               name="schedule"
               type="date"
               placeholder="End date"
+              value={movie.poster_link}
               onChange={handleInputChange}
             />
-          </Form.Group>
+          </Form.Group> */}
         </Row>
         <Form.Group className="mb-3" controlId="formGridOverview">
           <Form.Label>Overview</Form.Label>
@@ -218,6 +227,7 @@ export default function MovieNewForm() {
             as="textarea"
             name="overview"
             placeholder="Enter overview description"
+            value={movie.overview}
             onChange={handleInputChange}
           />
         </Form.Group>
@@ -231,18 +241,18 @@ export default function MovieNewForm() {
             checked={movie.in_production}
           />
         </Form.Group>
-      </Form>
-      <div className="form-container-button">
+        <div className="form-container-button">
         <Button className="new" variant="primary" type="submit">
           New Movie
         </Button>
-        <Button className="clear" variant="outline-primary" onClick={handleReset} type="">
+        <Button className="clear" variant="outline-primary" onClick={handleReset} type="button">
           Clear
         </Button>
-        <Button className="cancel"  variant="secondary" onClick={handleCancel} type="">
+        <Button className="cancel"  variant="secondary" onClick={handleCancel} type="button">
           Cancel
         </Button>
       </div>
+      </Form>
     </div>
   );
 }
