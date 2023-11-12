@@ -14,7 +14,7 @@ export default function MovieEditForm() {
   const [movie, setMovie] = useState({
     poster_link: "",
     director: "",
-    starring: "",
+    staring: "",
     overview: "",
     runtime: 0,
     release_year: 0,
@@ -22,6 +22,8 @@ export default function MovieEditForm() {
     current_balance: 0,
     schedule: "",
     in_production: false,
+    studio: '',
+    genre: ''
   });
 
   const handleInputChange = (e) => {
