@@ -24,7 +24,9 @@ export default function Show() {
   
   return (
     <div className="Show">
-      <h2>{movie.movie_name}</h2>
+      <div className="showtitle">
+        {movie.movie_name}
+      </div>
       <MovieDetails movie={movie} />
     </div>
   );
