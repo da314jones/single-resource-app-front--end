@@ -19,3 +19,10 @@ form {
     height: 450px;
     border-radius: 40px;
 } 
+
+.topNewPage{
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+    url('/createBack.jpeg');
+    background-size: cover;
+
+}

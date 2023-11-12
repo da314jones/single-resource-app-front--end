@@ -4,7 +4,7 @@ import "./New.css"
 function New() {
 
   return (
-    <>
+    <div className="topNewPage">
       <h2>Create New Movie</h2>
         <div className="form-container">
           <MovieNewForm />
@@ -12,7 +12,7 @@ function New() {
         <img src="/right-angle.png" alt="right angle camera view" />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

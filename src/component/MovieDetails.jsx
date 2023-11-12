@@ -31,8 +31,8 @@ export default function MovieDetails({ movie }) {
           />
         </div>
         <br></br>
-        <br></br>
         <Link className="atlBtnColor" to={`/movies/${movie.id}/edit`}>Edit</Link>
+        <Link className="atlBtnColor" to={`/movies`}>Movies List</Link>
         <Link className="atlBtnColor" to={`/tasks/${movie.id}`}>New Task</Link>
       </div>
       <div className="movie-details table table-striped table-hover">
