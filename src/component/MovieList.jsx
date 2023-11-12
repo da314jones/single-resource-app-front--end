@@ -32,7 +32,8 @@ export default function MovieList() {
   return (
     <div className="movies-container">
      
-      <img className="movies-container-image" src="public/lens-front.png" alt="" />
+      <img className="movies-container-image" src="camera.jpeg" alt="" />
+      
       
       <section>
         <Table striped bordered hover>

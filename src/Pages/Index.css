@@ -1,6 +1,15 @@
 .index {
+    margin-top: -50px;
     text-align: center;
     background-color: #f2efeb;
     padding-top: 60px;
     padding-bottom: 20px;
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+    url('/camera2.jpeg');
+    background-attachment: fixed;
+}
+
+.indexTitle{
+    font-weight: 700;
+    font-size: 41px;
 }

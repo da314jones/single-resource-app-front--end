@@ -3,7 +3,7 @@
     background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
     url('/show.jpeg');
     font-size: 18px;
-
+    background-attachment: fixed;
 }
 
 .showtitle{
