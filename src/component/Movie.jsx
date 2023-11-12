@@ -19,7 +19,7 @@ export default function Movie({ movie }) {
           <img
             src={movie.poster_link}
             alt={`Poster of ${movie.movie_name}`}
-
+            style={{ height: "50px" }}
           />
         </a>
       </td>
