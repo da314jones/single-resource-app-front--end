@@ -100,13 +100,13 @@ export default function MovieEditForm() {
             />
           </Form.Group>
 
-          <Form.Group as={Col} controlId="starring">
-            <Form.Label>Starring</Form.Label>
+          <Form.Group as={Col} controlId="staring">
+            <Form.Label>Staring</Form.Label>
             <Form.Control
               type="text"
               placeholder="Enter main cast"
-              name="starring"
-              value={movie.starring}
+              name="staring"
+              value={movie.staring}
               onChange={handleInputChange}
             />
           </Form.Group>

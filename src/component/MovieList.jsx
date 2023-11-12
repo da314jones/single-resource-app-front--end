@@ -40,7 +40,7 @@ export default function MovieList() {
             <tr>
               <th>Name</th>
               <th>Director</th>
-              <th>Balance</th>
+              <th>Balance(M$)</th>
               <th>Schedule</th>
               <th>Image</th>
             </tr>

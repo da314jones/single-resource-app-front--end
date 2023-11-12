@@ -47,11 +47,11 @@ export default function MovieDetails({ movie }) {
               <td>{movie.overview}</td>
             </tr>
             <tr>
-              <th>Balance</th>
+              <th>Balance(M$)</th>
               <td>{movie.current_balance?movie.current_balance:0}</td>
             </tr>
             <tr>
-              <th>Budget</th>
+              <th>Budget(M$)</th>
               <td>{movie.budget}</td>
             </tr>
             <tr>
