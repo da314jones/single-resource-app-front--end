@@ -1,8 +1,13 @@
+import "./FourOFour.css"
+
 export default function FourOFour() {
   
   return (
     <div>
-      <h1>Sorry, no page found</h1>
+      <div className="message">
+        Sorry, no page found
+      </div>
+      <div className="fourOFourBack"></div>
     </div>
   );
 }
