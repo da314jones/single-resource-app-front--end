@@ -4,7 +4,9 @@ function Edit() {
 
   return (
     <div className="new-edit-container">
-      <h2>Edit Movie Production Details</h2>
+      <div className="editTitle">
+        Edit Movie Production Details
+      </div>
       <MovieEditForm />
     </div>
   );

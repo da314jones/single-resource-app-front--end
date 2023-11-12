@@ -197,7 +197,7 @@ export default function MovieEditForm() {
         </Form.Group>
         <div className="form-edit-container-button">
           <div>
-          <Button className="update" variant="primary" type="submit">
+          <Button className="update atlBtnColor" variant="primary" type="submit">
             Update Movie
           </Button>
           </div>
