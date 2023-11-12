@@ -17,10 +17,10 @@ export default function MovieDetails({ movie }) {
       <div className="sidebar">
         <div className="btnGrid">
           <div>
-            <button className="btn btn-primary atlBtnColor" onClick={handleDelete}>Delete</button>
+            <button className="delete btn btn-primary atlBtnColor" onClick={handleDelete}>Delete</button>
           </div>
           <div>
-            <button className="btn btn-primary atlBtnColor" onClick={() => navigate(-1)}>Back</button>
+            <button className="back btn btn-primary atlBtnColor" onClick={() => navigate(-1)}>Back</button>
           </div>
         </div>
         <div className="imageV2" >
@@ -32,8 +32,7 @@ export default function MovieDetails({ movie }) {
         </div>
         <br></br>
         <Link className="atlBtnColor" to={`/movies/${movie.id}/edit`}>Edit</Link>
-        <Link className="atlBtnColor" to={`/movies`}>Movies List</Link>
-        <Link className="atlBtnColor" to={`/tasks/${movie.id}`}>New Task</Link>
+       <Link className="atlBtnColor" to={`/tasks/${movie.id}`}>New Task</Link>
       </div>
       <div className="movie-details table table-striped table-hover">
         <table >

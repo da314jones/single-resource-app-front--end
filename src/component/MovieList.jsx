@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
-import { Card } from "react-bootstrap";
 import Movie from "./Movie";
 import "./MovieList.css";
 
@@ -31,19 +30,16 @@ export default function MovieList() {
 
   return (
     <div className="movies-container">
-     
       <img className="movies-container-image" src="camera.jpeg" alt="" />
-      
-      
       <section>
-        <Table striped bordered hover>
+        <Table className="edit-table" striped bordered hover>
           <thead>
-            <tr>
-              <th>Name</th>
-              <th>Director</th>
-              <th>Balance(M$)</th>
-              <th>Schedule</th>
-              <th>Image</th>
+            <tr className="table-row">
+              <th className="name">Name</th>
+              <th className="director">Director</th>
+              <th className="balane">Balance(M$)</th>
+              <th className="schedule">Schedule</th>
+              <th className="image">Image</th>
             </tr>
           </thead>
           <tbody>
@@ -68,7 +64,8 @@ export default function MovieList() {
           </tbody>
         </Table>
         <div className="movie-container-pagination">
-          <Button className="atlBtnColor"
+          <Button
+            className="atlBtnColor"
             onClick={() => paginate(currentPage - 1)}
             disabled={currentPage === 1}
             variant="primary"
@@ -76,7 +73,8 @@ export default function MovieList() {
             Previous
           </Button>
           <span>Page {currentPage}</span>
-          <Button className="atlBtnColor"
+          <Button
+            className="atlBtnColor"
             onClick={() => paginate(currentPage + 1)}
             disabled={indexOfLastMovie >= allMovies.length}
             variant="primary"

@@ -60,3 +60,19 @@
   .movie-container-pagination Button, span {
     margin: 20px;
   }
+
+  .name {
+    text-align: center;
+  }
+  .director {
+    text-align: center;
+  }
+  .balance {
+    text-align: center;
+  }
+  .schedule {
+    text-align: center;
+  }
+  .image {
+    text-align: center;
+  }
