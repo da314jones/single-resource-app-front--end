@@ -8,6 +8,7 @@ import Edit from "./Pages/Edit";
 import FourOFour from "./Pages/FourOFour";
 import Home from "./Pages/Home";
 import Index from "./Pages/Index";
+import IndexActorList from "./Pages/IndexActorList"
 import New from "./Pages/New";
 import Show from "./Pages/Show";
 import NavBar from "./component/NavBar"
@@ -29,6 +30,7 @@ function App() {
           <Route path="/movies" element={<Index />} />
           <Route path="/movies/new" element={<New />} />
           <Route exact path="/movies/:id" element={<Show />} />
+          <Route path="/movies/:movie_id/actors" element={<IndexActorList />} />
           <Route path="/movies/:id/edit" element={<Edit />} />
           <Route path="*" element={<FourOFour />} />
         </Routes>
