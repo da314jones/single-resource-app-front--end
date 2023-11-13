@@ -1,23 +1,69 @@
-.actorTable{
 
-    max-width: fit-content;
-    text-align: center;
-}
-
-.Actors{
+.Actors {
     justify-content: center;
     text-align: center;
     display: grid;
-    grid-template-columns: 410px 1fr 150px;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-template-columns: auto auto auto;
 
 }
 
-.containActors{
-    grid-area: 1 / 2 / 2 / 3;
+.sideArea {
+    grid-area: auto;
+    border-radius: 10px;
+    max-height: 810px;
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.containActors {
+    grid-area: auto;
     justify-content: center;
     text-align: center;
+    margin-right: 100px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.link {
+    width: 185px;
+}
+
+.sideArea button,
+.sideArea a {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+th:first-of-type {
+    border-top-left-radius: 15px;
+    border:none;
+  }
+th:last-of-type {
+    border-top-right-radius: 15px;
+    border:none;
+  }
+tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 15px;
+    border:none;
+  }
+tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 15px;
+    border:none;
+  }
