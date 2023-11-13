@@ -1,0 +1,23 @@
+.actorTable{
+
+    max-width: fit-content;
+    text-align: center;
+}
+
+.Actors{
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 410px 1fr 150px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+}
+
+.containActors{
+    grid-area: 1 / 2 / 2 / 3;
+    justify-content: center;
+    text-align: center;
+}
+

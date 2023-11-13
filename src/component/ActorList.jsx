@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams, useNavigate, Link } from "react-router-dom"
+import Button from "react-bootstrap/Button";
 import React from 'react'
 import Actor from "./Actor";
 import "./ActorList.css"
@@ -24,7 +25,7 @@ function ActorList() {
     .then((response) => response.json())
     .then( actors => setActorList(actors.allActors))
     .then((res) => {
-      navigate(`${API}/movies/${movie_id}/actors/?order=asc`)
+      navigate(`/movies/${movie_id}/actors/?order=asc`)
     })
     .catch(error => console.log(error))
     }
@@ -34,7 +35,7 @@ function ActorList() {
     .then((response) => response.json())
     .then( actors => setActorList(actors.allActors))
     .then((res) => {
-      navigate(`${API}/movies/${movie_id}/actors/?order=desc`)
+      navigate(`/movies/${movie_id}/actors/?order=desc`)
     })
     .catch(error => console.log(error))
     }
@@ -46,17 +47,23 @@ function ActorList() {
   
   return (
     <div className="Actors" >
-        <table className="actorTable " >
+        <div className="containActors">
+        <table className={`actorTable table table-light table-hover table-striped 
+                           table-bordered table-sm align-middle`} >
           <tbody >
             <tr >
-                <th > <button onClick={handleSortActors}>Actor Name {` \u21f3`}</button> </th>
+                <th > 
+                    <Button className="atlBtnColor btn-secondary btn-lg" onClick={handleSortActors}>
+                        Actor Name {` \u21f3`}
+                    </Button>
+                </th>
                 <th> Info </th>
                 <th > Head Shot  </th>
             </tr>
           </tbody>
           <tbody >
             {actorList.map((actor, index) => {
-              return <Actor actor_name={actor.artist_name} 
+              return <Actor actor_name={actor.actor_name} 
                              key={actor.id}
                              actor_img={actor.actor_img} 
                              active={actor.active} 
@@ -65,6 +72,7 @@ function ActorList() {
             })}
           </tbody>
         </table>
+        </div>
     </div>
   )
 }

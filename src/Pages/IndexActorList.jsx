@@ -4,7 +4,7 @@ import "./IndexActorList.css"
 function IndexActorList() {
     return (
         <div className="ActorIndex">
-            <h1 className="actorTitleIndex">Contracted Actors For Movie </h1>
+            <div className="actorTitleIndex">Contracted Actors For Movie </div>
             <ActorList />
         </div>
     )
