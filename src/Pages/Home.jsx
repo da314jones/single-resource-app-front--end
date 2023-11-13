@@ -9,7 +9,7 @@ function Home() {
           Production Apprentice
         </div>
         <div className="subTitle">
-          Bringing Movie Prouctions to Life
+          Bringing Movie Productions to Life
         </div>
       </div>
       <div className="grid-container">

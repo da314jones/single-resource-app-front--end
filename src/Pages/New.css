@@ -1,8 +1,7 @@
+
 .newTitle {
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 5px;
-    font-size: 36px;
+    padding-top: 30px;
     font-weight: 600;
 }
 
@@ -11,11 +10,6 @@
     display: flex;
     justify-content: center;   
     font-weight: 600;
-    font-size:20px; 
-}
-form {
-    padding-right: 60px;
-    width: 600px;
 }
 
 .form-container img {
@@ -25,6 +19,8 @@ form {
 } 
 
 .topNewPage{
+    overflow: hidden;
+    margin-bottom: 20px;
     background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
     url('/createBack.jpeg');
     background-size: cover;

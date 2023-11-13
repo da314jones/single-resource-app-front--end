@@ -81,7 +81,7 @@ export default function MovieNewForm() {
       <Form noValidate onSubmit={handleSubmit}>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridMovieName">
-            <Form.Label>Movie Name</Form.Label>
+            <Form.Label>Code name</Form.Label>
             <Form.Control
               required
               name="movie_name"

@@ -72,7 +72,7 @@ export default function MovieList() {
                 </Button>
               </th>
               <th className="director">Director</th>
-              <th className="balane">Balance(M$)</th>
+              <th className="balane">Balance</th>
               <th className="schedule">Schedule</th>
               <th className="image">Image</th>
             </tr>

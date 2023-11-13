@@ -14,13 +14,10 @@ export default function MovieDetails({ movie }) {
 
   return (
     <div className="movie-detail-container">
-      <div className="sidebar">
-        {/* <div className="btnGrid"> */}
-          <div className="aside-container-top-btn">
-          <button className="delete btn btn-primary atlBtnColor" onClick={handleDelete}>Delete</button>
-          
+               <div className="sidebar">
             <button className="back btn btn-primary atlBtnColor" onClick={() => navigate(-1)}>Back</button>
-          </div>
+          <button className="delete btn btn-primary atlBtnColor" onClick={handleDelete}>Delete</button>
+        {/* <div className="btnGrid"> */}
         {/* </div> */}
         <div className="imageV2" >
           <img 
@@ -43,7 +40,7 @@ export default function MovieDetails({ movie }) {
             </tr>
             <tr>
               <th>Overview</th>
-              <td>{movie.overview}</td>
+              <td className="overview-text">{movie.overview}</td>
             </tr>
             <tr>
               <th>Balance(M$)</th>
@@ -96,12 +93,6 @@ export default function MovieDetails({ movie }) {
             <tr>
               <th>Cost</th>
               <td>{movie.cost}</td>
-            </tr>
-            <tr>
-              <th>Edit</th>
-              <td>
-                <Link to={`/movies/${movie.id}`}></Link>
-              </td>
             </tr>
           </tbody>
         </table>

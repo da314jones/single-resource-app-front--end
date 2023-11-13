@@ -1,4 +1,4 @@
-.Show{
+.Show {
     margin-top: -30px;
     background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
     url('/show.jpeg');
@@ -7,8 +7,11 @@
 }
 
 .showtitle{
+    color: ;
+    border-radius: 10px;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
-    margin-top: 30px;
+    padding-top: 60px;
+    padding-bottom: 40px;
 }

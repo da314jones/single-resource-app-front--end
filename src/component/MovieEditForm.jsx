@@ -80,7 +80,6 @@ export default function MovieEditForm() {
             <Form.Label>Poster Link</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Enter poster URL"
               name="poster_link"
               value={movie.poster_link}
               onChange={handleInputChange}
@@ -93,7 +92,6 @@ export default function MovieEditForm() {
             <Form.Label>Director</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Enter director's name"
               name="director"
               value={movie.director}
               onChange={handleInputChange}
@@ -104,7 +102,6 @@ export default function MovieEditForm() {
             <Form.Label>Staring</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Enter main cast"
               name="staring"
               value={movie.staring}
               onChange={handleInputChange}
@@ -114,10 +111,9 @@ export default function MovieEditForm() {
 
         <Row className="mb-3">
           <Form.Group as={Col} controlId="runtime">
-            <Form.Label>Runtime (minutes)</Form.Label>
+            <Form.Label>Runtime</Form.Label>
             <Form.Control
               type="number"
-              placeholder="Enter runtime in minutes"
               name="runtime"
               value={movie.runtime}
               onChange={handleInputChange}
@@ -138,7 +134,7 @@ export default function MovieEditForm() {
 
         <Row className="mb-3">
           <Form.Group as={Col} controlId="budget">
-            <Form.Label>Budget ($)</Form.Label>
+            <Form.Label>Budget</Form.Label>
             <Form.Control
               type="number"
               placeholder="Enter budget"
@@ -149,7 +145,7 @@ export default function MovieEditForm() {
           </Form.Group>
 
           <Form.Group as={Col} controlId="current_balance">
-            <Form.Label>Current Balance ($)</Form.Label>
+            <Form.Label>Current Balance</Form.Label>
             <Form.Control
               type="number"
               placeholder="Enter current balance"
