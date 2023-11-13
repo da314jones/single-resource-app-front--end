@@ -15,25 +15,29 @@ export default function MovieList() {
   const navigate = useNavigate();
 
   const changeMovieOrder = () => {
-    if(moviesOrder===false){
+    if (moviesOrder === false) {
       setMoviesOrder(true)
-    fetch(`${API}/movies/?order=asc`)
-    .then((response) => response.json())
-    .then( movies => setAllMovies(movies))
-    .then((res) => {
-      navigate('/movies/?order=asc')
-    })
-    .catch(error => console.log(error))
+      const newOrder = allMovies.sort((a, b) => {
+        if (a.movie_name.toLowerCase() < b.movie_name.toLowerCase())
+          return -1
+        else if (a.movie_name.toLowerCase() > b.movie_name.toLowerCase())
+          return 1
+        else
+          return 0
+      })
+      setAllMovies(newOrder)
     }
-    else{
+    else {
       setMoviesOrder(false)
-      fetch(`${API}/movies/?order=desc`)
-    .then((response) => response.json())
-    .then( movies => setAllMovies(movies))
-    .then((res) => {
-      navigate('/movies/?order=desc')
-    })
-    .catch(error => console.log(error))
+      const newOrder = allMovies.sort((b, a) => {
+        if (a.movie_name.toLowerCase() < b.movie_name.toLowerCase())
+          return -1
+        else if (a.movie_name.toLowerCase() > b.movie_name.toLowerCase())
+          return 1
+        else
+          return 0
+      })
+      setAllMovies(newOrder)
     }
   }
 
@@ -63,13 +67,13 @@ export default function MovieList() {
     <div className="movies-container">
       <img className="movies-container-image" src="/camera.jpeg" alt="" />
       <section>
-      <div className="balance" >
-         Balance Across Movies On Page: {currentMovies.reduce((tot,curr) => {return tot+curr.current_balance},0 )} million
-      </div>
+        <div className="balance" >
+          Balance Across Movies On Page: {currentMovies.reduce((tot, curr) => { return tot + curr.current_balance }, 0)} million
+        </div>
         <Table className="edit-table" striped bordered hover>
           <thead>
             <tr className="table-row">
-              <th className="name">  
+              <th className="name">
                 <Button className="atlBtnColor btn-secondary btn-sm" onClick={handleSortMovies}>
                   Name {` \u21f3`}
                 </Button>
