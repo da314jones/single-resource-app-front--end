@@ -59,6 +59,9 @@ function ActorDetails() {
                 <Link to={`/movies/${movie_id}/actors/`}>
                     <Button type="button" className="btn btn-primary btn-lg atlBtnColor" onClick={handleDelete}>Delete</Button>
                 </Link>
+                <Link  to={`/movies/${movie_id}/actors/${id}/edit`}>
+                    <Button type="button" className="btn btn-primary btn-lg atlBtnColor" >Edit</Button>
+                </Link>
             </div>
             <br></br>
             <br></br>

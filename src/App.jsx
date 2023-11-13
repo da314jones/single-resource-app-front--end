@@ -5,6 +5,7 @@ import {
   BrowserRouter as Router, Routes, Route 
 } from "react-router-dom";
 import Edit from "./Pages/Edit";
+import EditActor from "./Pages/EditActor";
 import FourOFour from "./Pages/FourOFour";
 import Home from "./Pages/Home";
 import Index from "./Pages/Index";
@@ -35,6 +36,7 @@ function App() {
           <Route path="/movies/:movie_id/actors" element={<IndexActorList />} />
           <Route path="/movies/:movie_id/actors/new" element={<NewActor />} />
           <Route path="/movies/:movie_id/actors/:id" element={<ShowActor />} />
+          <Route path="/movies/:movie_id/actors/:id/edit" element={<EditActor />} />
           <Route path="/movies/:id/edit" element={<Edit />} />
           <Route path="*" element={<FourOFour />} />
         </Routes>
