@@ -49,7 +49,7 @@ function ActorList() {
     return (
         <div className="Actors" >
             <div className="sideArea">
-                <Link className="atlBtnColor link" to={`/movies`}>Add Actor to Movie</Link>
+                <Link className="atlBtnColor link" to={`/movies/${movie_id}/actors/new`}>Add Actor to Movie</Link>
                 <Link className="atlBtnColor link" to={`/movies/${movie_id}`}>Back</Link>
             </div>
             <div className="containActors">
