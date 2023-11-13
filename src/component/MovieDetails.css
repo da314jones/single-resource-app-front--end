@@ -61,15 +61,6 @@
     margin: 0;
   }
 
-  .btnGrid{
-    text-align: center;
-    justify-content: center;
-    display:grid;
-    grid-template-columns: auto auto;
-    padding: 0;
-    margin: 0;
-  }
-
   .imageV2{
     justify-content: center;
     display:flex;
@@ -86,7 +77,4 @@
 
 .splitTable{
   display:contents;
-  color:green;
-  padding-right: -200px;
-  margin-right: -200px;
 }

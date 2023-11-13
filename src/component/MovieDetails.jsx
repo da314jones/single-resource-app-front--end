@@ -17,14 +17,13 @@ export default function MovieDetails({ movie }) {
   return (
     <div className="movie-detail-container">
       <div className="sidebar">
-        <div className="btnGrid">
-          <div>
-            <button className="delete btn btn-primary atlBtnColor" onClick={handleDelete}>Delete</button>
-          </div>
-          <div>
+        {/* <div className="btnGrid"> */}
+          <div className="aside-container-top-btn">
+          <button className="delete btn btn-primary atlBtnColor" onClick={handleDelete}>Delete</button>
+          
             <button className="back btn btn-primary atlBtnColor" onClick={() => navigate(-1)}>Back</button>
           </div>
-        </div>
+        {/* </div> */}
         <div className="imageV2" >
           <img
             src={movie.poster_link}
