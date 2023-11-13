@@ -10,8 +10,10 @@ import FourOFour from "./Pages/FourOFour";
 import Home from "./Pages/Home";
 import Index from "./Pages/Index";
 import IndexActorList from "./Pages/IndexActorList"
+import IndexTaskList from "./Pages/IndexTaskList"
 import New from "./Pages/New";
 import NewActor from "./Pages/NewActor";
+import NewTask from "./Pages/NewTask";
 import Show from "./Pages/Show";
 import ShowActor from "./Pages/ShowActor";
 import NavBar from "./component/NavBar"
@@ -34,6 +36,8 @@ function App() {
           <Route path="/movies/new" element={<New />} />
           <Route exact path="/movies/:id" element={<Show />} />
           <Route path="/movies/:movie_id/actors" element={<IndexActorList />} />
+          <Route path="/movies/:movie_id/tasks" element={<IndexTaskList />} />
+          <Route path="/movies/:movie_id/tasks/new" element={<NewTask />} />
           <Route path="/movies/:movie_id/actors/new" element={<NewActor />} />
           <Route path="/movies/:movie_id/actors/:id" element={<ShowActor />} />
           <Route path="/movies/:movie_id/actors/:id/edit" element={<EditActor />} />

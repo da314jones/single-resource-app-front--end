@@ -22,24 +22,28 @@ function ActorList() {
     const changeOrderActor = () => {
         if (actorOrder === false) {
             setActorOrder(true)
-            fetch(`${API}/movies/${movie_id}/actors/?order=asc`)
-                .then((response) => response.json())
-                .then(actors => setActorList(actors.allActors))
-                .then((res) => {
-                    navigate(`/movies/${movie_id}/actors/?order=asc`)
-                })
-                .catch(error => console.log(error))
-        }
-        else {
+            const newOrder = actorList.sort((a, b) => {
+              if (a.actor_name.toLowerCase() < b.actor_name.toLowerCase())
+                return -1
+              else if (a.actor_name.toLowerCase() > b.actor_name.toLowerCase())
+                return 1
+              else
+                return 0
+            })
+            setActorList(newOrder)
+          }
+          else {
             setActorOrder(false)
-            fetch(`${API}/movies/${movie_id}/actors/?order=desc`)
-                .then((response) => response.json())
-                .then(actors => setActorList(actors.allActors))
-                .then((res) => {
-                    navigate(`/movies/${movie_id}/actors/?order=desc`)
-                })
-                .catch(error => console.log(error))
-        }
+            const newOrder = actorList.sort((b, a) => {
+              if (a.actor_name.toLowerCase() < b.actor_name.toLowerCase())
+                return -1
+              else if (a.actor_name.toLowerCase() > b.actor_name.toLowerCase())
+                return 1
+              else
+                return 0
+            })
+            setActorList(newOrder)
+          }
     }
     const handleSortActors = event => {
         event.preventDefault()

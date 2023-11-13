@@ -1,5 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./MovieDetails.css";
+import Table from "react-bootstrap/Table";
+import Task from "./Task"
 const API = import.meta.env.VITE_API_URL;
 
 export default function MovieDetails({ movie }) {
@@ -20,7 +22,7 @@ export default function MovieDetails({ movie }) {
         {/* <div className="btnGrid"> */}
         {/* </div> */}
         <div className="imageV2" >
-          <img 
+          <img
             src={movie.poster_link}
             alt={`Poster of ${movie.movie_name}`}
             style={{ height: "375px" }}
@@ -29,7 +31,8 @@ export default function MovieDetails({ movie }) {
         <br></br>
         <Link className="atlBtnColor" to={`/movies/${movie.id}/edit`}>Edit</Link>
         <Link className="atlBtnColor" to={`/movies/${movie.id}/actors`}>Contracted Actors</Link>
-        <Link className="atlBtnColor" to={`/tasks/${movie.id}`}>New Task</Link>
+        <Link className="atlBtnColor" to={`/movies/${movie.id}/tasks`}>Task List</Link>
+        <Link className="atlBtnColor" to={`/movies/${movie.id}/tasks/new`}>New Task</Link>
       </div>
       <div className="movie-details table table-striped table-hover">
         <table >
@@ -44,7 +47,7 @@ export default function MovieDetails({ movie }) {
             </tr>
             <tr>
               <th>Balance(M$)</th>
-              <td>{movie.current_balance?movie.current_balance:0}</td>
+              <td>{movie.current_balance ? movie.current_balance : 0}</td>
             </tr>
             <tr>
               <th>Budget(M$)</th>
@@ -72,7 +75,7 @@ export default function MovieDetails({ movie }) {
             </tr>
             <tr>
               <th>In Production</th>
-              <td>{movie.in_production?"Yes":"No"}</td>
+              <td>{movie.in_production ? "Yes" : "No"}</td>
             </tr>
             <tr>
               <th>Runtime</th>
