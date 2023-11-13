@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom"
-import "./Actor.css"
 
-function Actor({ actor_name, actor_img, active, age }) {
+function Actor({ actor_name, actor_img, active, age, id, movie_id }) {
     return (
         <tr>
             <td>
-                {actor_name}
+                <Link to={`/movies/${movie_id}/actors/${id}`}>{actor_name}</Link>
             </td>
             <td>
                 Age: {age}

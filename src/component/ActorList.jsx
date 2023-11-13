@@ -49,9 +49,8 @@ function ActorList() {
     return (
         <div className="Actors" >
             <div className="sideArea">
-                <Link className="atlBtnColor link" to={`/movies`}>Place Holder</Link>
-                <Link className="atlBtnColor link" to={`/movies`}>Place Holder</Link>
-                <Link className="atlBtnColor link" to={`/movies`}>Place Holder</Link>
+                <Link className="atlBtnColor link" to={`/movies`}>Add Actor to Movie</Link>
+                <Link className="atlBtnColor link" to={`/movies/${movie_id}`}>Back</Link>
             </div>
             <div className="containActors">
             <Table className="edit-table " striped bordered hover>
@@ -73,6 +72,8 @@ function ActorList() {
                                 actor_img={actor.actor_img}
                                 active={actor.active}
                                 age={actor.age}
+                                id={actor.id}
+                                movie_id={movie_id}
                             />
                         })}
                     </tbody>

@@ -11,6 +11,7 @@ import Index from "./Pages/Index";
 import IndexActorList from "./Pages/IndexActorList"
 import New from "./Pages/New";
 import Show from "./Pages/Show";
+import ShowActor from "./Pages/ShowActor";
 import NavBar from "./component/NavBar"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css"
@@ -31,6 +32,7 @@ function App() {
           <Route path="/movies/new" element={<New />} />
           <Route exact path="/movies/:id" element={<Show />} />
           <Route path="/movies/:movie_id/actors" element={<IndexActorList />} />
+          <Route path="/movies/:movie_id/actors/:id" element={<ShowActor />} />
           <Route path="/movies/:id/edit" element={<Edit />} />
           <Route path="*" element={<FourOFour />} />
         </Routes>
