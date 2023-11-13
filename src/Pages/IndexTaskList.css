@@ -1,0 +1,18 @@
+.TaskIndex{
+    margin-top: 0;
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+    url('/actorsBack.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 400px;
+  
+}
+
+.taskTitleIndex{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+

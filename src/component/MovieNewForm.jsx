@@ -201,11 +201,11 @@ export default function MovieNewForm() {
         </Row>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridSchedule">
-            <Form.Label>Start date:</Form.Label>
+            <Form.Label>Schedule:</Form.Label>
             <Form.Control
               name="schedule"
-              type="date"
-              placeholder="Start date"
+              type="text"
+              placeholder="Schedule"
               value={movie.schedule}
               onChange={handleInputChange}
             />

@@ -64,7 +64,7 @@ export default function MovieList() {
       <img className="movies-container-image" src="/camera.jpeg" alt="" />
       <section>
       <div className="balance" >
-         Current Company Total Balance Accorss All Movies: {currentMovies.reduce((tot,curr) => {return tot+curr.current_balance},0 )} million
+         Balance Across Movies On Page: {currentMovies.reduce((tot,curr) => {return tot+curr.current_balance},0 )} million
       </div>
         <Table className="edit-table" striped bordered hover>
           <thead>

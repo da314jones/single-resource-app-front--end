@@ -34,7 +34,8 @@ export default function MovieDetails({ movie }) {
         <br></br>
         <Link className="atlBtnColor" to={`/movies/${movie.id}/edit`}>Edit</Link>
         <Link className="atlBtnColor" to={`/movies/${movie.id}/actors`}>Contracted Actors</Link>
-        <Link className="atlBtnColor" to={`/tasks/${movie.id}`}>New Task</Link>
+        <Link className="atlBtnColor" to={`/movies/${movie.id}/tasks`}>Task List</Link>
+        <Link className="atlBtnColor" to={`/movies/${movie.id}/tasks/new`}>New Task</Link>
       </div>
       <div className="movie-details table table-striped table-hover">
         <table >
@@ -85,49 +86,6 @@ export default function MovieDetails({ movie }) {
             </tr>
           </tbody>
         </table>
-  
-        <Table className="splitTable" striped bordered hover>
-          <tbody> 
-            <tr>
-              <th>
-                Todo(s):
-              </th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-            </tr> 
-            <tr>
-              <th>
-                Production Task Name
-              </th>
-              <th>
-                Description
-              </th>
-              <th>
-                Department
-              </th>
-              <th>
-                Cost
-              </th>
-              <th>
-                Completed
-              </th>
-            </tr>
-          </tbody>
-          
-          <tbody>
-            {movie.allTasks.map((task, index) => {
-              return(<Task task_name={task.task_name}
-                           description={task.description}
-                           department={task.department}
-                           cost={task.cost}
-                           completed={task.completed}
-                           key={task.id} />)
-            })}
-          </tbody>
-        </Table>
-
       </div>
     </div>
   );
