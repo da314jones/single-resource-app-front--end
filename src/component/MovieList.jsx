@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import Movie from "./Movie";
@@ -10,6 +11,36 @@ export default function MovieList() {
   const [allMovies, setAllMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [moviesPerPage, setMoviesPerPage] = useState(7);
+  const [moviesOrder, setMoviesOrder] = useState(false);
+  const navigate = useNavigate();
+
+  const changeMovieOrder = () => {
+    if(moviesOrder===false){
+      setMoviesOrder(true)
+    fetch(`${API}/movies/?order=asc`)
+    .then((response) => response.json())
+    .then( movies => setAllMovies(movies))
+    .then((res) => {
+      navigate('/movies/?order=asc')
+    })
+    .catch(error => console.log(error))
+    }
+    else{
+      setMoviesOrder(false)
+      fetch(`${API}/movies/?order=desc`)
+    .then((response) => response.json())
+    .then( movies => setAllMovies(movies))
+    .then((res) => {
+      navigate('/movies/?order=desc')
+    })
+    .catch(error => console.log(error))
+    }
+  }
+
+  const handleSortMovies = event => {
+    event.preventDefault()
+    changeMovieOrder()
+  }
 
   useEffect(() => {
     fetch(`${API}/movies`)
@@ -30,12 +61,16 @@ export default function MovieList() {
 
   return (
     <div className="movies-container">
-      <img className="movies-container-image" src="camera.jpeg" alt="" />
+      <img className="movies-container-image" src="/camera.jpeg" alt="" />
       <section>
         <Table className="edit-table" striped bordered hover>
           <thead>
             <tr className="table-row">
-              <th className="name">Name</th>
+              <th className="name">  
+                <Button className="atlBtnColor btn-secondary btn-sm" onClick={handleSortMovies}>
+                  Name {` \u21f3`}
+                </Button>
+              </th>
               <th className="director">Director</th>
               <th className="balane">Balance(M$)</th>
               <th className="schedule">Schedule</th>
