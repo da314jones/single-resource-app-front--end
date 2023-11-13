@@ -1,4 +1,5 @@
 import ActorDetails from "../component/ActorDetails"
+import "./ShowActor.css"
 
 function ShowActor(){
     return (

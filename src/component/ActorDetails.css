@@ -1,0 +1,14 @@
+.top{
+    color: rgb(245,245,245);
+    text-align: center;
+    justify-content: center;
+    display:grid;
+}
+
+.actorImage{
+   justify-content: center;
+   display:flex;
+   height: 700px;
+}
+
+
