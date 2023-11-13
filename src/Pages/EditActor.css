@@ -1,0 +1,29 @@
+
+
+.new-edit-container {
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+    url('/actorEdit2.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 400px;
+  }
+  
+  .editTitle {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;   
+    font-weight: 600;
+    font-size:20px; 
+}
+form {
+    padding-right: 60px;
+    width: 600px;
+    font-size: 30px;
+    text-align: center;
+}

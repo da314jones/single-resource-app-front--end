@@ -1,0 +1,14 @@
+.ActorIndex{
+    margin-top: 0;
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
+    url('/actorsBack.jpeg');
+    background-attachment: fixed;
+}
+
+.actorTitleIndex{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
