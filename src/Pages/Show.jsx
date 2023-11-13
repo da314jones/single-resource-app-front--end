@@ -10,7 +10,7 @@ export default function Show() {
   const [movie, setMovie] = useState();
 
   useEffect(() => {
-    fetch(`${API}/movies/${id}`)
+    fetch(`${API}/movies/${id}/tasks`)
     .then((response) => response.json())
     .then((responseJSON) => {
       setMovie(responseJSON)

@@ -78,3 +78,15 @@
 .back {
   padding-left: 5px;
 }
+
+.tasks{
+  text-align: center;
+  padding-right: 175px;
+}
+
+.splitTable{
+  display:contents;
+  color:green;
+  padding-right: -200px;
+  margin-right: -200px;
+}

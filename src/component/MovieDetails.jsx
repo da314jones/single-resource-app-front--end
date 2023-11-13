@@ -1,5 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./MovieDetails.css";
+import Table from "react-bootstrap/Table";
+import Task from "./Task"
 const API = import.meta.env.VITE_API_URL;
 
 export default function MovieDetails({ movie }) {
@@ -24,7 +26,7 @@ export default function MovieDetails({ movie }) {
           </div>
         </div>
         <div className="imageV2" >
-          <img 
+          <img
             src={movie.poster_link}
             alt={`Poster of ${movie.movie_name}`}
             style={{ height: "375px" }}
@@ -48,7 +50,7 @@ export default function MovieDetails({ movie }) {
             </tr>
             <tr>
               <th>Balance(M$)</th>
-              <td>{movie.current_balance?movie.current_balance:0}</td>
+              <td>{movie.current_balance ? movie.current_balance : 0}</td>
             </tr>
             <tr>
               <th>Budget(M$)</th>
@@ -76,36 +78,57 @@ export default function MovieDetails({ movie }) {
             </tr>
             <tr>
               <th>In Production</th>
-              <td>{movie.in_production?"Yes":"No"}</td>
+              <td>{movie.in_production ? "Yes" : "No"}</td>
             </tr>
             <tr>
               <th>Runtime</th>
               <td>{movie.runtime}</td>
             </tr>
-            <tr>
-              <th>Tasks</th>
-              <td></td>
-            </tr>
-            <tr>
-              <th>description</th>
-              <td>{movie.description}</td>
-            </tr>
-            <tr>
-              <th>Department</th>
-              <td>{movie.department}</td>
-            </tr>
-            <tr>
-              <th>Cost</th>
-              <td>{movie.cost}</td>
-            </tr>
-            <tr>
-              <th>Edit</th>
-              <td>
-                <Link to={`/movies/${movie.id}`}></Link>
-              </td>
-            </tr>
           </tbody>
         </table>
+  
+        <Table className="splitTable" striped bordered hover>
+          <tbody> 
+            <tr>
+              <th>
+                Todo(s):
+              </th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr> 
+            <tr>
+              <th>
+                Production Task Name
+              </th>
+              <th>
+                Description
+              </th>
+              <th>
+                Department
+              </th>
+              <th>
+                Cost
+              </th>
+              <th>
+                Completed
+              </th>
+            </tr>
+          </tbody>
+          
+          <tbody>
+            {movie.allTasks.map((task, index) => {
+              return(<Task task_name={task.task_name}
+                           description={task.description}
+                           department={task.department}
+                           cost={task.cost}
+                           completed={task.completed}
+                           key={task.id} />)
+            })}
+          </tbody>
+        </Table>
+
       </div>
     </div>
   );
