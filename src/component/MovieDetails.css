@@ -61,20 +61,30 @@
     margin: 0;
   }
 
-  .btnGrid{
-    text-align: center;
-    justify-content: center;
-    display:grid;
-    grid-template-columns: auto auto;
-    padding: 0;
-    margin: 0;
-  }
-
   .imageV2{
     justify-content: center;
     display:flex;
   }
 
-.back {
-  padding-left: 5px;
+.details-aside-back {
+margin-left: 10px;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.split {
+  max-width: 100px;
+}
+
+.aside-container-top-btn {
+  display: flex;
+  padding: 10px;
+}
+.back  {
+}
+
+.delete  {
+  padding-right: 10px;
 }

@@ -9,7 +9,7 @@ export default function NavBar() {
         <Link to="/">
           <img
             className="contain"
-            src="/public/logo.png"
+            src="/logo.png"
             alt="logo"
             width="33"
             height="33"
