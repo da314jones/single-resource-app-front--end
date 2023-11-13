@@ -5,9 +5,11 @@ function EditActor() {
   return (
     <div className="new-edit-container">
       <div className="editTitle">
-        Edit Movie Production Details
-      </div>
+        Edit Actor Details
+      </div >
+      <div className="form-container">
       <ActorEditForm />
+      </div>
     </div>
   );
 }
