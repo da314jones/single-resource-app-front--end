@@ -1,29 +1,42 @@
-.contain {
-  width: 175px;
-  border-radius: 50%;
-  background: linear-gradient(90deg, #2a0eaa 25%, #080514 65%);
+img.contain {
+  width: 400px;
+  padding-top: 10px;
   cursor: pointer;
-  /* background: linear-gradient(90deg, #080514 25%, #2a0eaa 100%); */
+  position: relative;
 }
 
 .nav {
+  position: relative;
   height: 100px;
   background: linear-gradient(90deg, #2a0eaa 25%, #080514 65%);
 }
 
- .list,
- .create {  
+ .list
+ {  
+  position: absolute;
   max-width: 50px;
-  margin: 30%;
-  margin-left: 40px;
+  top: 15px;
+  margin-left: 175px;
      color: white;
-     cursor: pointer;
- }
+     cursor: pointer; 
+ } 
 
- * Media Queries */
+ .create {  
+  position: absolute;
+  max-width: 50px;
+  top: 15px;
+  margin-left: 250px;
+     color: white;
+     cursor: pointer; 
+ } 
+
  @media (max-width: 1200px) {
    .contain {
      width: 150px; 
+     .list, .create {
+      max-width: 45px;
+      /* left: calc(100% - 50px); */
+     }
    }
  
    .list,
@@ -40,6 +53,7 @@
    .list,
    .create {
      max-width: 40px;
+     left: calc(3% - 0px);
    }
  }
  
@@ -51,6 +65,7 @@
    .list,
    .create {
      max-width: 35px;
+     left: calc(0% - 0px);
    }
  }
  
@@ -62,12 +77,13 @@
    .list,
    .create {
      max-width: 30px;
+     left: calc(-10% - 0px);
    }
  }
  
  @media (max-width: 480px) {
    .contain {
-     width: 75px;
+     width: 5px;
    }
  
    .list,
