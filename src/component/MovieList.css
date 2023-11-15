@@ -59,23 +59,44 @@
   
   .movie-container-pagination Button, span {
     margin: 20px;
+    width: 200px;
+    font-size: 22px;
   }
+
+  .movie-container-pagination Button {
+    background: linear-gradient(90deg, #2a0eaa 25%, #080514 100%);
+  }
+
 
   .name {
     text-align: center;
     color:white;
+    width: 300px;
+    font-size: 24px;
   }
   .director {
     text-align: center;
+    font-size: 24px;
   }
   .balance {
     text-align: center;
+    font-size: 24px;
   }
   .schedule {
     text-align: center;
+    font-size: 24px;
+
   }
   .image {
     text-align: center;
+    font-size: 24px;
+
+  }
+
+  .atlBtnColor-sort {
+    width: 150px;
+    font-size: 24px;
+
   }
 
   table {

@@ -62,7 +62,7 @@ export default function ActorNewForm() {
     };
 
     return (
-        <div>
+        <div className="actor-newForm-container">
             <Form noValidate onSubmit={handleSubmit}>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridActorName">
@@ -112,13 +112,13 @@ export default function ActorNewForm() {
                 </Form.Group>
                 <div className="form-container-button">
                     <Button className="new" variant="primary" type="submit">
-                        New Actor
+                      <span>New Actor</span>
                     </Button>
                     <Button className="clear" variant="outline-primary" onClick={handleReset} type="button">
-                        Clear
+                        <span>Clear</span>
                     </Button>
                     <Button className="cancel" variant="secondary" onClick={handleCancel} type="button">
-                        Cancel
+                        <span>Cancel</span>
                     </Button>
                 </div>
             </Form>

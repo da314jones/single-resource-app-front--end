@@ -4,6 +4,7 @@ import "./MovieDetails.css";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import Task from "./Task"
+import "./TaskList.css"
 const API = import.meta.env.VITE_API_URL;
 
 export default function TaskList() {
@@ -62,7 +63,9 @@ export default function TaskList() {
             </Table>
             <br></br>
             <div className="task">
-                <Button className="btn btn-primary atlBtnColor btn-lg" onClick={() => navigate(-1)}>Back</Button>
+                <Button className="btn btn-primary atlBtnColor btn-lg" onClick={() => navigate(-1)}>
+                   <span>Back</span>
+                    </Button>
             </div>
         </div>
     )

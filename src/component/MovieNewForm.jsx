@@ -234,13 +234,13 @@ export default function MovieNewForm() {
         </Form.Group>
         <div className="form-container-button">
         <Button className="new" variant="primary" type="submit">
-          New Movie
+          <span>New Movie</span>
         </Button>
         <Button className="clear" variant="outline-primary" onClick={handleReset} type="button">
-          Clear
+          <span>Clear</span>
         </Button>
         <Button className="cancel"  variant="secondary" onClick={handleCancel} type="button">
-          Cancel
+          <span>Cancel</span>
         </Button>
       </div>
       </Form>

@@ -192,14 +192,16 @@ export default function MovieEditForm() {
           />
         </Form.Group>
         <div className="form-edit-container-button">
-          <div>
+          <div className="button-update">
           <Button className="update atlBtnColor" variant="primary" type="submit">
-            Update Movie
+            <span>Update Movie</span>
           </Button>
           </div>
-          <div>
-          <Button variant="secondary" onClick={handleBack} type="submit">
-            Back
+          <div className="button-back">
+          <Button className="back" variant="secondary" onClick={handleBack} type="submit">
+           <span>
+           Back
+            </span>
           </Button>
           </div>
         </div>

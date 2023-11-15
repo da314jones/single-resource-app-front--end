@@ -5,11 +5,14 @@ function NewActor() {
 
   return (
     <div className="topNewPage">
-      <div className="newTitle">
         Add Actor
+      <div className="newTitle">
+      <div className="left-container-newForm">
+        <img src="/desi.png" alt="" />
       </div>
-      <div className="form-container"> 
+      <div className="spacer2">
         <ActorNewForm />
+      </div>
       </div>
     </div>
   );

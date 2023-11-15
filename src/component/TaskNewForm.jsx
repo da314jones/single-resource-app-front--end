@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import "./ActorNewForm.css"
+import "./TaskNewForm.css"
 const API = import.meta.env.VITE_API_URL;
 
 export default function TaskNewForm() {
@@ -65,7 +66,7 @@ export default function TaskNewForm() {
 
     return (
         <div>
-            <Form noValidate onSubmit={handleSubmit}>
+            <Form className="task-form-new" noValidate onSubmit={handleSubmit}>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridTaskName">
                         <Form.Label>Task Name</Form.Label>
@@ -128,13 +129,13 @@ export default function TaskNewForm() {
                 </Form.Group>
                 <div className="form-container-button">
                     <Button className="new" variant="primary" type="submit">
-                        New Task
+                       <span>New Task</span>
                     </Button>
                     <Button className="clear" variant="outline-primary" onClick={handleReset} type="button">
-                        Clear
+                        <span>Clear</span>
                     </Button>
                     <Button className="cancel" variant="secondary" onClick={handleBack} type="button">
-                        Back
+                       <span>Back</span>
                     </Button>
                 </div>
             </Form>

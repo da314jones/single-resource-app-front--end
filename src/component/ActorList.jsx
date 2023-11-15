@@ -10,7 +10,8 @@ const API = import.meta.env.VITE_API_URL
 function ActorList() {
     let navigate = useNavigate()
     let { movie_id } = useParams()
-    const [actorList, setActorList] = useState([])
+    const [actorList, setActorList] = useState([]);
+
     useEffect(() => {
         fetch(`${API}/movies/${movie_id}/actors`)
             .then((response) => response.json())
@@ -53,9 +54,13 @@ function ActorList() {
     return (
         <div className="Actors" >
             <div className="sideArea">
+              <img src="/chair.jpeg" alt="directors-chairs" className="sideArea-img" />
+          <div className="container-actors-a">
                 <Link className="atlBtnColor link" to={`/movies/${movie_id}/actors/new`}>Add Actor</Link>
                 <Link className="atlBtnColor link" to={`/movies/${movie_id}`}>Back</Link>
+          </div>
             </div>
+            <div className="spacer"></div>
             <div className="containActors">
             <Table className="edit-table " striped bordered hover>
                     <tbody >

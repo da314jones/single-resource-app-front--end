@@ -16,3 +16,11 @@
     margin-bottom: 20px;
 }
 
+.task-list-container {
+   padding-bottom: 40px;
+}
+
+ .task-img {
+    width: 400px;
+    border-radius: 50%;
+ }

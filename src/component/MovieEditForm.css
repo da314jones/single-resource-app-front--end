@@ -18,6 +18,7 @@ form.label {
 .form-edit-container-button {
     display: flex;
     justify-content: space-around;
+
 }
 
 .form-edit-container {
@@ -32,10 +33,17 @@ form.label {
 
 
 .form-edit-container .form-label {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .form-edit-container-button button {
     padding: 5px 15px; 
     font-size: 14px; 
 }
+
+.back {
+    width: 200px;
+    height: 45px;
+    font-size: 3rem;
+}
+

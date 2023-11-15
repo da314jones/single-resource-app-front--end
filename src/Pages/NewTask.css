@@ -1,0 +1,17 @@
+img.task-img-left {
+    width: 450px;
+    border-radius: 50%;
+}
+
+img.task-img-right {
+    width: 450px;
+    border-radius: 50%;
+}
+
+.spacer-left {
+    width: 100px;
+}
+
+.spacer-right {
+    width: 60px;
+}

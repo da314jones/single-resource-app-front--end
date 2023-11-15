@@ -1,0 +1,16 @@
+button {
+    width: 200px;
+    background: linear-gradient(90deg, #2a0eaa 25%, #080514 100%);
+}
+
+span {
+    font-size: 22px;
+}
+
+th {
+    font-size: 22px;
+}
+
+td {
+    font-size: 20px;
+}

@@ -1,6 +1,5 @@
-.newTitle {
-    display: grid;
-    text-align: center;
+.newTitle {display: flex;
+    justify-content: space-evenly;
     
 
 
@@ -8,20 +7,23 @@
     font-weight: 600;
 }
 
-.form-container {
-    display: flex;
-    justify-content: center;   
-    font-weight: 600;
-    font-size:20px; 
-}
 form {
     padding-right: 60px;
     width: 600px;
 }
 
+.left-container-newForm img {
+    width: 700px;
+    border-radius: 30px;
+}
+
+.spacer2 {
+    padding-right: 20px;
+}
 
 
 .topNewPage{
+    align-items: center;
     background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),
     url('/newActor2.jpeg');
     background-position: center;

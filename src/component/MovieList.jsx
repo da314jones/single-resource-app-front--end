@@ -74,12 +74,12 @@ export default function MovieList() {
           <thead>
             <tr className="table-row">
               <th className="name">
-                <Button className="atlBtnColor btn-secondary btn-sm" onClick={handleSortMovies}>
-                  Name {` \u21f3`}
+                <Button className="atlBtnColor-sort btn-secondary btn-sm" onClick={handleSortMovies}>
+                  Sort {` \u21f3`}
                 </Button>
               </th>
               <th className="director">Director</th>
-              <th className="balane">Balance</th>
+              <th className="balance">Balance</th>
               <th className="schedule">Schedule</th>
               <th className="image">Image</th>
             </tr>
