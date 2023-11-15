@@ -5,8 +5,7 @@ function New() {
 
   return (
     <div className="topNewPage">
-      <div className="newTitle">
-        Create New Movie Production
+      <div className="newTitle">Add Production
       </div>
       <div className="form-container"> 
         <MovieNewForm />

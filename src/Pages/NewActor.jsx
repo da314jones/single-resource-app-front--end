@@ -6,7 +6,7 @@ function NewActor() {
   return (
     <div className="topNewPage">
       <div className="newTitle">
-        Create New Actor Profile
+        Add Actor
       </div>
       <div className="form-container"> 
         <ActorNewForm />

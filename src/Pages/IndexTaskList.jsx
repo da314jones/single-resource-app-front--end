@@ -4,7 +4,7 @@ import "./IndexTaskList.css"
 function IndexTaskList() {
     return (
         <div className="TaskIndex">
-            <div className="taskTitleIndex">Film Production Tasks: </div>
+            <div className="taskTitleIndex">Production Tasks</div>
             <TaskList />
         </div>
     )

@@ -4,8 +4,7 @@ import "./Index.css";
 function Index() {
   return (
     <div className="index">
-      <div className="indexTitle">
-        Movie Production List
+      <div className="indexTitle">Production List
       </div>
       <MovieList />
     </div>

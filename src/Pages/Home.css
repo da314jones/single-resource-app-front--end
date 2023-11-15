@@ -1,22 +1,25 @@
 .video{
+    max-width: 900px;
     border-radius: 22px;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
               rgba(0, 0, 0, 0.12) 0px -12px 30px,
               rgba(0, 0, 0, 0.12) 0px 4px 6px,
               rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-              rgba(0, 0, 0, 0.09) 0px -3px 5px;
+              rgba(0, 0, 0, 0.9) 0px -3px 5px;
 }
 .home-container-image{
-    border-radius: 300px;
+    max-width: 500px;
+    border-radius: 500px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
               rgba(0, 0, 0, 0.12) 0px -12px 30px,
               rgba(0, 0, 0, 0.12) 0px 4px 6px,
               rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-              rgba(0, 0, 0, 0.09) 0px -3px 5px;
+              rgba(0, 0, 0, .3) 0px -3px 5px;
 }
 
 .animate__bounceIn{
+    padding-top: 20px;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
               rgba(0, 0, 0, 0.12) 0px -12px 30px,
@@ -40,7 +43,7 @@
     font-size: 39px;
     font-weight:bolder;
     padding-top: 0px;
-    margin-top: 5px;
+    margin-top: 25px;
     margin-left: 500px;
     margin-right: 500px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
@@ -49,6 +52,7 @@
               rgba(0, 0, 0, 0.17) 0px 12px 13px, 
               rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+
 .subTitle{
     border-radius: 10px;
     color: black;
@@ -87,7 +91,7 @@
               rgba(0, 0, 0, 0.12) 0px 4px 6px,
               rgba(0, 0, 0, 0.17) 0px 12px 13px, 
               rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  }
+            }
 
 .grid-container{
     display:grid;
@@ -101,3 +105,80 @@
               rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+    .video {
+      width: 80%; 
+      height: auto; 
+    }
+  
+    .home-container-image {
+      width: 80%; 
+      height: auto; 
+    }
+  }
+  
+  @media (min-width: 920px) and (max-width: 1200px) {
+    .video{
+      width: 80%; 
+      height: auto;
+    }
+}
+
+@media (min-width: 920px) and (max-width: 1200px) {
+    .home-container-image,
+    .logoDiv{
+      width: 75%; 
+      height: auto;
+    }
+}
+
+  @media (min-width: 768px) and (max-width: 920px) {
+    .video{
+      width: 100%; 
+      height: auto;
+    }
+}
+
+  @media (min-width: 768px) and (max-width: 920px) {
+    .home-container-image,
+    .logoDiv{
+      width: 75%; 
+      height: auto;
+    }
+}
+
+  @media (max-width: 768px) {
+    .video{
+      width: 80%; 
+      height: auto;
+    }
+}
+
+  @media (max-width: 768px) {
+    .home-container-image {
+      width: 40%; 
+      height: auto;
+    }
+    
+
+
+    .topTitle,
+    .subTitle {
+      margin-left: 20px;
+      margin-right: 20px;
+      font-size: smaller; 
+    }
+    
+    .grid-container {
+      grid-template-columns: 1fr; 
+      gap: 20px; 
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .topTitle,
+    .subTitle {
+      font-size: smaller; 
+  }
+}

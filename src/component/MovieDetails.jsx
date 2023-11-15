@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./MovieDetails.css";
-import Table from "react-bootstrap/Table";
-import Task from "./Task"
+import { Button } from "react-bootstrap";
 const API = import.meta.env.VITE_API_URL;
 
 export default function MovieDetails({ movie }) {
@@ -16,26 +15,26 @@ export default function MovieDetails({ movie }) {
 
   return (
     <div className="movie-detail-container">
-               <div className="sidebar">
-            <button className="back btn btn-primary atlBtnColor" onClick={() => navigate(-1)}>Back</button>
-          <button className="delete btn btn-primary atlBtnColor" onClick={handleDelete}>Delete</button>
-        {/* <div className="btnGrid"> */}
-        {/* </div> */}
-        <div className="imageV2" >
-          <img
+               <div className="movie-container-sidebar">
+          <img 
+          className="movie-container-image"
             src={movie.poster_link}
             alt={`Poster of ${movie.movie_name}`}
-            style={{ height: "375px" }}
           />
+          <div className="movie-detail-container-links">
+        <Link className="movie-detail-container-back" to={`/movies/`}>Back</Link>
+                    <Link className="movie-detail-container-edit" to={`/movies/${movie.id}/edit`}>Edit</Link>
+        <Link className="movie-detail-container-actors" to={`/movies/${movie.id}/actors`}>Actors</Link>
+        <Link className="movie-detail-container-tasks" to={`/movies/${movie.id}/tasks`}>Tasks</Link>
+        <Link className="movie-detail-container-addTask" to={`/movies/${movie.id}/tasks/new`}>Add Task</Link>
+          <Link className="movie-detail-container-delete" onClick={handleDelete}>Delete
+          </Link>
+          </div>
         </div>
-        <br></br>
-        <Link className="atlBtnColor" to={`/movies/${movie.id}/edit`}>Edit</Link>
-        <Link className="atlBtnColor" to={`/movies/${movie.id}/actors`}>Contracted Actors</Link>
-        <Link className="atlBtnColor" to={`/movies/${movie.id}/tasks`}>Task List</Link>
-        <Link className="atlBtnColor" to={`/movies/${movie.id}/tasks/new`}>New Task</Link>
-      </div>
-      <div className="movie-details table table-striped table-hover">
-        <table >
+        
+      
+      <div className="movie-detail-container-table table table-striped table-hover">
+        <table className="table1" >
           <tbody >
             <tr>
               <th>Studio</th>

@@ -210,16 +210,7 @@ export default function MovieNewForm() {
               onChange={handleInputChange}
             />
           </Form.Group>
-          {/* <Form.Group as={Col} controlId="formGridSchedule">
-            <Form.Label>End date:</Form.Label>
-            <Form.Control
-              name="schedule"
-              type="date"
-              placeholder="End date"
-              value={movie.poster_link}
-              onChange={handleInputChange}
-            />
-          </Form.Group> */}
+          
         </Row>
         <Form.Group className="mb-3" controlId="formGridOverview">
           <Form.Label>Overview</Form.Label>

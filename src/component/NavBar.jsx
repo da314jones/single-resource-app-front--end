@@ -4,24 +4,24 @@ const API = import.meta.env.VITE_API_URL;
 
 export default function NavBar() {
   return (
-    <div className="navbar">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <>
+      <div className="home">
         <Link to="/">
           <img
             className="contain"
-            src="/logo.png"
+            src="/logo-removebg-preview.png"
             alt="logo"
-            width="33"
-            height="33"
           />
         </Link>
+      </div>
+      {/* <nav className="navbar navbar-expand-lg navbar-dark bg-dark "> */}
         <Link to="/movies">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="35"
             fill="currentColor"
-            className="bi bi-camera-reels"
+            className="list bi bi-camera-reels"
             viewBox="0 0 16 16"
           >
             <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z" />
@@ -35,7 +35,7 @@ export default function NavBar() {
             width="32"
             height="35"
             fill="currentColor"
-            className="bi bi-pencil-square"
+            className="create bi bi-pencil-square"
             viewBox="0 0 16 16"
           >
             <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
@@ -45,7 +45,7 @@ export default function NavBar() {
             />
           </svg>
         </Link>
-      </nav>
-    </div>
+      {/* </nav> */}
+    </>
   );
 }

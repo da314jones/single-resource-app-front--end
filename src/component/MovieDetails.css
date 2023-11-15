@@ -1,78 +1,141 @@
 .movie-detail-container {
   display: flex;
-  justify-content: space-between;
-  padding-bottom: 50px;
-}
-
-.sidebar {
-  border-radius: 10px;
-  margin-left: 30px;
-  max-height: 810px;
-  width: 20%;
-  padding: 20px;
-  background-color: #f5f5f5;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.sidebar button,
-.sidebar a {
-  display: block;
-  margin-bottom: 10px;
-  text-align: center;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-}
-
-.movie-details {
-  max-width: 65%;
-  width: 75%;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  margin-right: 80px;
-}
-
-.atlBtnColor {
-  background: linear-gradient(90deg, #2a0eaa 25%, #080514 100%);
-  max-width: 175px;
-  margin-left: 43px;
-  display: block;
-  margin: 10px auto;
-  min-width: 100px;
-  max-width: 175px;
-  border-radius: 7px;
-}
-
-.imageV2 {
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.movie-container-sidebar {
   display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 400px;
+  height: 850px;
+  margin-right: 50px;
+  margin-left: 20px;
+  border-radius: 20px;
+  background-color: #F2EFEB;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.details-aside-back {
-margin-left: 10px;
+.movie-container-image {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
 }
 
-.tasks{
-  text-align: center;
-  padding-right: 175px;
-}
-
-.split {
-  max-width: 100px;
-}
-
-.aside-container-top-btn {
+div.movie-detail-container-table {
   display: flex;
-  padding: 10px;
-}
-.back  {
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  margin-left: 50px;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #F2EFEB;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.delete  {
-  padding-right: 10px;
+.table1 {
+  width: 700px;
+  height: 600px;
+  font-size: 18px;
+}
+
+.movie-detail-container-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  gap: 10px;
+}
+
+a.movie-detail-container-back,
+a.movie-detail-container-edit,
+a.movie-detail-container-actors,
+a.movie-detail-container-tasks,
+a.movie-detail-container-addTask,
+a.movie-detail-container-delete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 200px;
+  height: 40px;
+  color: white;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 7px;
+  background: linear-gradient(90deg, #2a0eaa 25%, #080514 100%);
+}
+
+.movie-container-sidebar,
+div.movie-detail-container-table {
+  background-color: rgba(242, 239, 235, 0.3); 
+}
+
+th {
+  width: 200px;
+}
+
+
+@media (max-width: 1100px) {
+  .movie-container-image {
+    width: 225px; 
+  }
+  .table1 {
+    width: calc(700px * 0.75); 
+  }
+}
+
+@media (max-width: 920px) {
+  .movie-container-image {
+    width: 150px; 
+  .table1 {
+    width: calc(700px * 0.5); 
+  }
+}
+}
+
+@media (max-width: 768px) {
+  .movie-detail-container {
+    flex-direction: column;
+  }
+
+  .movie-container-sidebar,
+  div.movie-detail-container-table {
+    flex: 1 1 100%;
+    max-width: none;
+    width: 90%;
+    margin: auto;
+  }
+
+  .movie-container-image {
+    width: 150px; 
+  }
+
+  .table1 {
+    width: calc(700px * 0.5); 
+    min-width: calc(700px * 0.5); 
+  }
+
+  table {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-detail-container-links a {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }

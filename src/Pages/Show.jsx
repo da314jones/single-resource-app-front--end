@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 const API = import.meta.env.VITE_API_URL;
@@ -11,25 +10,23 @@ export default function Show() {
 
   useEffect(() => {
     fetch(`${API}/movies/${id}`)
-    .then((response) => response.json())
-    .then((responseJSON) => {
-      setMovie(responseJSON)
-    })
-    .catch(error => console.log(error))
-  }, [id, API])
+      .then((response) => response.json())
+      .then((responseJSON) => {
+        setMovie(responseJSON);
+      })
+      .catch((error) => console.log(error));
+  }, [id, API]);
 
   if (!movie) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
-  
+
   return (
-    <div className="Show">
-      <div className="showtitle">
-        {movie.movie_name}
+    <div className="show-container">
+      <div className="show-container-component">
+      <div className="show-container-title">{movie.movie_name}</div>
+        <MovieDetails movie={movie} />
       </div>
-      <MovieDetails movie={movie} />
     </div>
   );
 }
-
-
