@@ -1,7 +1,7 @@
 # Production Apprentice
-The Production Apprentice app is a prototype app intended to be used by a hypothetical Film Production Company that needs to tack data of films in production.
+The Production Apprentice app is a prototype app intended to be used by a hypothetical Film Production Company that needs to track its data on films in production.
 
-For example you would need to tack the budget and balance of a film in production, the schedule of when a production will be shooting, the actors that are cast for this movie, and various other relevant data. This information needs to be stored and accessed in 1 app, as opposed to using various different resources. 
+For example, you would need to tack the budget and balance of a film in production, the schedule of when a film production will be shooting, the actors that are cast for this movie, and various other relevant data. This information needs to be stored and accessed in 1 app, as opposed to using various resources. 
 
 Contents
 ========
@@ -9,13 +9,13 @@ Contents
  * [Deployed App Access](#deployed-app-access)
  * [GitHub Repositories](#github-repositories)
  * [Trello used](#trello-used)
- * [Wirefram ](#wirefram)
+ * [Wireframe ](#wireframe)
  * [SQl database structure](#sql-database-structure)
 
 
 ### Sitemap
 
-The navbar contains (1) home button as the logo, (2) the list of films in production as a film camera, and (3) a pencil writing as the create new film production object.
+The navbar contains 1. Home button as the logo; 2 The list of films in production as a film camera; and 3. A pencil writing on a canvas - the create new film production object.
 
 ```shell
 Home
@@ -65,9 +65,9 @@ The Trello used to coordinate, team effort:
 
 https://trello.com/b/RUTZnVFy/single-resource-app
 
-### Wirefram 
+### Wireframe 
 
-Wirefram used as a starting idea:
+Wireframe used as a starting idea:
 
 https://www.canva.com/design/DAFzVizDKCk/KzfExYChfqeGKevZOzSnoA/edit
 
@@ -75,7 +75,7 @@ The original idea was morphed as ideas evolved and were revised.
 
 ### SQl database structure
 
-The database structure can be accesd here:
+The database structure can be accessed here:
 
 https://miro.com/app/board/uXjVNXWVH_g=/
 

@@ -3,6 +3,8 @@ img.contain {
   padding-top: 10px;
   cursor: pointer;
   position: relative;
+  padding-bottom: 10px;
+  background-color: #2a0eaa;
 }
 
 .nav {
