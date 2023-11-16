@@ -5,14 +5,39 @@ For example you would need to tack the budget and balance of a film in productio
 
 Contents
 ========
+ * [Sitemap](#sitemap)
  * [Deployed App Access](#deployed-app-access)
  * [GitHub Repositories](#github-repositories)
  * [Trello used](#trello-used)
  * [Wirefram ](#wirefram)
  * [SQl database structure](#sql-database-structure)
- * [Sitemap](#sitemap)
- * [Reinstalling Dotfiles](#reinstalling-dotfiles)
- * [Want to contribute?](#want-to-contribute)
+
+
+### Sitemap
+
+The navbar contains (1) home button as the logo, (2) the list of films in production as a film camera, and (3) a pencil writing as the create new film production object.
+
+```shell
+Home
+├─ Movies
+│   │
+│   └─ Movie
+│       │
+│       ├── Edit
+│       ├── Delete
+│       ├── Tasks         
+│       ├── New Task    
+│       │   
+│       └── Actors
+│              │
+│              ├── Actor 
+│              │     ├── Edit
+│              │     └── Delete
+│              │
+│              └── New Actor
+│              
+└── New Movie  
+```
 
 ### Deployed App Access
 
@@ -54,31 +79,6 @@ The database structure can be accesd here:
 
 https://miro.com/app/board/uXjVNXWVH_g=/
 
-### Sitemap
 
-
-The navbar contains (1) home button as the logo, (2) the list of films in production as a film camera, and (3) a pencil writing as the create new film production object.
-
-```shell
-Home
-├─ Movies
-│   │
-│   └─ Movie
-│       │
-│       ├── Edit
-│       ├── Delete
-│       ├── Tasks         
-│       ├── New Task    
-│       │   
-│       └── Actors
-│              │
-│              ├── Actor 
-│              │     ├── Edit
-│              │     └── Delete
-│              │
-│              └── New Actor
-│              
-└── New Movie  
-```
 
 
