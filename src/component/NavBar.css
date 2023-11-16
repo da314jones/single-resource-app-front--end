@@ -35,7 +35,6 @@ img.contain {
      width: 150px; 
      .list, .create {
       max-width: 45px;
-      /* left: calc(100% - 50px); */
      }
    }
  
