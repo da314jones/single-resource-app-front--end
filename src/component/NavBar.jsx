@@ -6,13 +6,14 @@ export default function NavBar() {
   return (
     <>
       <div className="nav">
+        <div className="spacer-nav"></div>
         <div className="home">
           <Link to="/">
-            <img className="contain" src="/Untitled (10).png" alt="logo" />
+            <img className="contain" src="/newlogo.png" alt="logo" />
           </Link>
         </div>
         <div className="list">
-          <Link to="/movies">
+          <Link className="list-a" to="/movies">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -28,7 +29,7 @@ export default function NavBar() {
           </Link>
         </div>
         <div className="create">
-          <Link to="/movies/new">
+          <Link className="create-a" to="/movies/new">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"

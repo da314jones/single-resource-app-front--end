@@ -16,101 +16,71 @@ img.task-img-right {
     width: 60px;
 }
 
-@keyframes rotateYOne {
-    0%, 100% { transform: rotateY(0deg); }
-    50% { transform: rotateY(360deg); }
-  }
+
   
-  @keyframes rotateYTwo {
-    0%, 100% { transform: rotateY(0deg); }
-    50% { transform: rotateY(-360deg); }
-  }
-  
-  img.task-img-left {
-    width: 450px;
-    border-radius: 50%;
-    animation: rotateYOne 300s linear infinite;
-  }
-  
-  img.task-img-right {
-    width: 450px;
-    border-radius: 50%;
-    animation: rotateYTwo 100s linear infinite;
-    animation-delay: 3s; /* This delay should be half of the animation duration */
-  }
-  
-  /* Media Queries */
   @media (max-width: 1600px) {
     img.task-img-left,
     img.task-img-right {
-      max-width: 220px; /* Adjust to your preferred size */
+      max-width: 220px; 
     }
   }
   
   @media (max-width: 576px) {
     img.task-img-left,
     img.task-img-right {
-      max-width: 110px; /* Adjust to your preferred size */
+      max-width: 110px;
     }
   }
   
   
-  /* You can adjust the animation duration to change the speed */
   
-  /* Add your media queries below as needed */
   @media (max-width: 576px) {
     img.task-img-left,
     img.task-img-right {
-      width: 110px; /* This is the smallest size */
+      width: 110px; 
     }
-    /* Adjust the animation speed if needed when the size changes */
   }
     
-  /* You can adjust the animation duration to change the speed */
   
-  /* Add your media queries below as needed */
   @media (max-width: 576px) {
     img.task-img-left,
     img.task-img-right {
-      width: 110px; /* This is the smallest size */
+      width: 110px; 
     }
-    /* Adjust the animation speed if needed when the size changes */
   }
   
-}
 
-/* Gradually decrease size as the screen gets smaller */
 @media (max-width: 1600px) {
   img.task-img-left,
   img.task-img-right {
-    width: 280px; /* Adjust the size as needed for 1600px wide screens */
+    width: 280px;
   }
 }
 
 @media (max-width: 1200px) {
   img.task-img-left,
   img.task-img-right {
-    width: 200px; /* Adjust the size as needed for 1200px wide screens */
+    width: 200px; 
   }
 }
 
 @media (max-width: 992px) {
   img.task-img-left,
   img.task-img-right {
-    width: 150px; /* Adjust the size as needed for 992px wide screens */
+    width: 150px; 
   }
 }
 
 @media (max-width: 768px) {
   img.task-img-left,
   img.task-img-right {
-    width: 130px; /* Adjust the size as needed for 768px wide screens */
+    width: 130px; 
   }
 }
 
 @media (max-width: 576px) {
   img.task-img-left,
   img.task-img-right {
-    width: 110px; /* This is the smallest size */
+    width: 110px; 
   }
 }
